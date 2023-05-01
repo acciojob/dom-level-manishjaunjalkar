@@ -1,4 +1,11 @@
 //your JS code here. If required.
-let lev=document.getElementById("level").value;
+let levelElement = document.getElementById('level');
+let level = 0;
+let currentNode = levelElement;
 
-alert("The level of the element is: "+lev);
+while (currentNode.parentNode) {
+  level++;
+  currentNode = currentNode.parentNode;
+}
+
+alert('The level of the element is: ' + level);
